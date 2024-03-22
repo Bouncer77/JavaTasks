@@ -17,7 +17,7 @@ import java.util.stream.Stream;
  * •	В методе main(String[]) считай с клавиатуры число N, потом проинициализируй массив array размером N элементов и заполни числами с клавиатуры.
  * •	В методе main(String[]) выведи в консоль минимальное число среди элементов массива.
  * */
-public class MinArrElem {
+public class MinAndMaxArrElem {
     public static int[] array;
 
     public static void main(String[] args) throws Exception {
@@ -35,6 +35,9 @@ public class MinArrElem {
         Stream<Integer> arrBox = Arrays.stream(array).boxed();
 
         arrBox.min(Integer::compareTo).ifPresent(System.out::println);
+
+        // Tasks0507 Max элемент
+        // arrBox.max(Integer::compareTo).ifPresent(System.out::println);
 
         // Ренения ниже не соответствуют критериям проверки задач на JR
         // solution1(); // лучшее решение задачи
