@@ -1,4 +1,4 @@
-package pro.kosenkov.javarush.syntax.reverse;
+package pro.kosenkov.javarush.syntax.arrays.reverse;
 
 
 import java.util.Arrays;
@@ -11,10 +11,6 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
- * https://javarush.com/quests/lectures/questsyntaxpro.level05.lecture02
- * Java Syntax Pro
- * 6 уровень, 3 лекция
- *
  * Тебе нужно написать программу, которая:
  *
  * 1) Считывает с консоли целое число N.
@@ -31,7 +27,7 @@ import java.util.stream.Stream;
  * •	Программа должна выводить введенные N чисел в том же порядке, если N нечётное.
  *
  * */
-public class Tasks0505 {
+public class Reverse {
 
 
     public static void main(String[] args) {
