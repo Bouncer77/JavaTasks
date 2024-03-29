@@ -9,6 +9,18 @@ repositories {
     mavenCentral()
 }
 
+
+// 1st approach
+javadoc.options.encoding = 'UTF-8'
+
+// 2nd approach
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
+}
+
+compileJava.options.encoding = 'UTF-8'                      //In build.gradle
+compileTestJava.options.encoding = "UTF-8"
+
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
@@ -17,3 +29,4 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
