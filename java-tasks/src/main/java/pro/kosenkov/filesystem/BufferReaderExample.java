@@ -1,18 +1,20 @@
 package pro.kosenkov.filesystem;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.util.Scanner;
 
-public class ReadFile {
+public class BufferReaderExample {
 
     public static void main(String[] args) {
-        String inputFileName = "C:\\Projects\\JavaTasks\\JavaTasks\\java-tasks\\src\\main\\java\\pro\\kosenkov\\filesystem\\text.txt";
 
+        BufferedReader br = null;
+        FileInputStream fis = null;
+        Scanner sc = null;
+        InputStreamReader isr = null;
+        Path path = null;
 
-        // BufferedReader in = new BufferedReader(
-        //           new InputStreamReader(new FileInputStream(fileDir), "UTF-8"));
-
-        // BufferedReader reader = new BufferedReader(new FileReader(inputFileName, StandardCharsets.UTF_8))
+        String inputFileName = "java-tasks/src/main/java/pro/kosenkov/filesystem/text.txt";
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(
                         new FileInputStream(inputFileName), "UTF-8"));) {
